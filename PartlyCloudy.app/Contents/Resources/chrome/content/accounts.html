@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!--
+     Copyright Jesse Andrews, 2005-2008
+     http://overstimulate.com
+
+     This file may be used under the terms of of the
+     GNU General Public License Version 2 or later (the "GPL"),
+     http://www.gnu.org/licenses/gpl.html
+
+     Software distributed under the License is distributed on an "AS IS" basis,
+     WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+     for the specific language governing rights and limitations under the
+     License.
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<head>
+  <link rel="stylesheet" href="chrome://partly/skin/accounts.css" />
+  <link rel="stylesheet" href="vendor/humanmsg.css" />
+  <script type="application/x-javascript" src="auth.js"></script>  
+  <script type="application/x-javascript" src="S3Ajax.js"></script>
+  <script type="application/x-javascript" src="vendor/jquery-1.2.3.min.js"></script>
+  <script type="application/x-javascript" src="vendor/jquery.blockUI.js"></script>
+  <script type="application/x-javascript" src="vendor/jquery.easing.js"></script>
+  <script type="application/x-javascript" src="vendor/humanmsg.js"></script>
+  <script type="application/x-javascript" src="accounts.js"></script>
+</head>
+<body>
+  <h1>S3 Buckets</h1>
+
+  <ul>
+    <li><a href="#" id="updateCredentials">Setup S3 Credentials</a></li>
+    <li><a href="#" id="createBucket" style="display:none">Add Bucket</a></li>
+  </ul>
+
+  <div id="active" style="display:none">
+    <table id="buckets"></table>
+  </div>
+
+  <div id="credentials" style="display:none">
+    <h2>Your Amazon Access Keys</h2>
+    <div>
+      <label for="s3-key">AWS Access Key</label>
+      <input type="text" id="s3-key" />
+    </div>
+    <div>
+      <label for="s3-secret-key">S3 Secret Key</label>
+      <input type="password" id="s3-secret-key" />
+    </div>
+    <div>
+      <label>&nbsp;</label>
+      <input type="button" id="saveButton" value="Save" onclick="s3_controller.save()" />
+    </div>
+  </div>
+
+</body>
+</html>

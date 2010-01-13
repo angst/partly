@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+     Copyright Jesse Andrews, 2005-2008
+     http://overstimulate.com
+     
+     This file may be used under the terms of of the
+     GNU General Public License Version 2 or later (the "GPL"),
+     http://www.gnu.org/licenses/gpl.html
+     
+     Software distributed under the License is distributed on an "AS IS" basis,
+     WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+     for the specific language governing rights and limitations under the
+     License.
+-->
+
+<?xml-stylesheet type="text/css" href="chrome://s3/skin/toolbarbutton.css"?>
+
+<overlay id="s3Overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <menupopup id="menu_ToolsPopup">
+    <menuitem id="s3-base-menuitem"
+            oncommand="openUILink('s3:///', event, false, true);"
+            onclick="checkForMiddleClick(this, event);"
+            label="Open S3"/>
+  </menupopup>
+</overlay>

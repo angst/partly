@@ -1,1 +1,1 @@
-pref("toolkit.defaultChromeURI", "chrome://partlycloudy/content/main.xul");
+pref("toolkit.defaultChromeURI", "chrome://partly/content/main.xul");
