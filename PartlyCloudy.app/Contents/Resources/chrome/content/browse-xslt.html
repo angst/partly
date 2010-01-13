@@ -16,23 +16,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <script type="application/x-javascript">
-      // HACK: because we are inside the evil.html iframe
-      document.write("<base href='s3://" + window.top.location.host + "/' target='_top' />");
-    </script>
 
-    <link rel="stylesheet" href="chrome://s3/skin/style.css" />
-    <link rel="stylesheet" href="chrome://s3/content/vendor/humanmsg.css" />
+    <link rel="stylesheet" href="chrome://partly/skin/style.css" />
+    <link rel="stylesheet" href="vendor/humanmsg.css" />
 
-    <script type="application/x-javascript" src="chrome://s3/content/vendor/jquery-1.2.3.min.js"></script>
+    <script type="application/x-javascript" src="vendor/jquery-1.2.3.min.js"></script>
     <script type="application/x-javascript" src="chrome://global/content/nsDragAndDrop.js"></script>
-    <script type="application/x-javascript" src="chrome://s3/content/S3Ajax.js"></script>
-    <script type="application/x-javascript" src="chrome://s3/content/dnd.js"></script>
-    <script type="application/x-javascript" src="chrome://s3/content/uploader.js"></script>
-    <script type="application/x-javascript" src="chrome://s3/content/vendor/jquery.blockUI.js"></script>
-    <script type="application/x-javascript" src="chrome://s3/content/vendor/jquery.easing.js"></script>
-    <script type="application/x-javascript" src="chrome://s3/content/vendor/humanmsg.js"></script>
-    <script type="application/x-javascript" src="chrome://s3/content/browse-xslt.js"></script>
+    <script type="application/x-javascript" src="auth.js"></script>
+    <script type="application/x-javascript" src="S3Ajax.js"></script>
+    <script type="application/x-javascript" src="dnd.js"></script>
+    <script type="application/x-javascript" src="uploader.js"></script>
+    <script type="application/x-javascript" src="vendor/jquery.blockUI.js"></script>
+    <script type="application/x-javascript" src="vendor/jquery.easing.js"></script>
+    <script type="application/x-javascript" src="vendor/humanmsg.js"></script>
+    <script type="application/x-javascript" src="browse-xslt.js"></script>
   </head>
   <body>
     <h2 id="location"></h2>

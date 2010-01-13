@@ -40,7 +40,7 @@ function s3Control() {
     var td=document.createElement('td');
     var a=document.createElement('a');
     a.appendChild( document.createTextNode(bucket) );
-    a.setAttribute("href", "s3://" + bucket + "/");
+    a.setAttribute("href", "browse-xslt.html?" + bucket);
     td.appendChild( a );
     tr.appendChild( td );
 

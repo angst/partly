@@ -1,5 +1,3 @@
-Components.utils.import("resource://s3/auth.js");
-
 var Cc = Components.classes;
 var Ci = Components.interfaces;
 
@@ -16,9 +14,10 @@ function deleteKey(node) {
   }
 }
 
+
 var fm = {
   init: function() {
-    document.title = window.location.href;
+    // document.title = window.location.href;
     
     $('.upload').click(function() {
       fm.upload();
@@ -38,14 +37,14 @@ var fm = {
     }
 
     var req = new XMLHttpRequest();
-    req.open("GET", "chrome://s3/content/keys.xsl", false);
+    req.open("GET", "chrome://partly/content/keys.xsl", false);
     req.send(null);
 
     xslt.importStylesheet(req.responseXML);
 
-    bucket = window.top.location.host;
-    prefix = unescape(window.top.location.pathname.slice(1));
-    $('#location').html("<a href='s3://'>s3</a>://<a href='s3://"+bucket+"'>"+bucket+"</a>/"+prefix)
+    bucket = window.location.search.slice(1);
+    prefix = ''; // unescape(window.top.location.pathname.slice(1));
+    $('#location').html("<a href='accounts.html'>s3</a>://<a href='?'"+bucket+"'>"+bucket+"</a>/"+prefix)
     fm.listKeys();
   },
 

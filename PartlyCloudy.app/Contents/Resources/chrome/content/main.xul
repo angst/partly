@@ -6,8 +6,7 @@ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
   <menubar id="menubar">
     <menu id="file-menu" label="File">
       <menupopup id="file-popup">
-        <menuitem label="Send" />
-        <menuitem label="Exit"/>
+        <menuitem label="Reload" oncommand="window.location.reload()"/>
       </menupopup>
     </menu>
   </menubar>
